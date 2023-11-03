@@ -37,13 +37,13 @@ function rot13(encodedStr) {
 	encodedStr=encodedStr.toUpperCase();
   // Only change code below this line
 	for(let i=0;i<encodedStr.length;i++){
-		// if(lookup[encodedStr[i]]){
-		// 	decodedArr+=lookup[encodedStr[i]];
-		// }
+		if(lookup[encodedStr[i]]){
+			decodedArr+=lookup[encodedStr[i]];
+		}
 		decodedArr+=lookup[encodedStr[i]];
-		// else{
-		// 	decodedArr+=encodedStr[i];
-		// }
+		else{
+			decodedArr+=encodedStr[i];
+		}
 	}
 
   return decodeArr ; //return decodedArr
